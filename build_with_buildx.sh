@@ -17,4 +17,4 @@ if [ "$3" != "" ];then
 	DIRECTORY="$3"
 fi
 
-docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t $TAG:$VERSION --push $DIRECTORY
+docker buildx build --platform linux/amd64,linux/386,linux/arm64,linux/arm/v7,linux/arm/v6 -t $TAG:$VERSION --push $DIRECTORY
